@@ -1,0 +1,205 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  padding: 3rem;
+  /* background-image: url(./assets/background3.jpg); */
+  background-size: cover;
+  background-position: center;
+}
+
+.App{
+  /* background-color: rgba(90, 210, 237, 0.138); */
+  padding: 2rem;
+}
+
+/* ------------------------------------------- Modal Windows -------------------------------------------------------------- */
+
+.background{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left: 0;
+  background: rgba(0,0,0,.5)
+}
+
+/* ------------------------------------------- User Created, deleted, Updated & Clear -------------------------------------------------------------- */
+
+.popUp{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 0rem ;
+  color: black;
+  font-weight: bold;
+  width: 200px;
+  height: 200px;
+  background-color:white;
+  border-radius: 20%;
+}
+
+.fa-circle-check{
+  font-size: 50px;
+  color: green;
+  margin-top: -15px;
+  margin-bottom: 5px;
+}
+
+.fa-circle-xmark{
+  color: red;
+  font-size: 18px;  
+}
+
+/* ------------------------------------------ Form ---------------------------------------------- */
+
+.form{
+  /* background-color: aqua; */
+  padding: 1rem;
+  /* min-width: 470px; */
+  /* max-width: 500px; */
+  /* min-height: 315px; */
+  /* max-height: 315px; */
+  margin: auto;
+}
+
+.addUser{
+  background-color:  rgb(96, 193, 156);
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin: auto;
+
+}
+
+.inputContainer{
+  padding: 5px;
+}
+
+input{
+  height: 35px;
+  border-radius: 5px;
+  border: 0px solid gray;
+  padding: 2px 5px;
+  margin: 2px 5px;
+  background-color: rgba(236, 236, 236, 0.421);
+  font-weight: bold;
+}
+
+.name{
+  width: 46%;
+}
+
+.email{
+  width: 93.5%;
+}
+
+.password{
+  width: 93.5%;
+}
+
+.birthday{
+  width: 93.5%;
+}
+
+.create{
+  width: 80%;
+  height: 30px;
+  background-color: rgb(96, 193, 156);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+  margin-right: 5px;
+}
+
+.create{
+  width: 80%;
+  height: 30px;
+  background-color: rgb(96, 193, 156);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+  margin-left: 1.5rem;
+}
+
+.clear{
+  height: 30px;
+  padding: 5px;
+  background-color: rgba(250, 6, 6, 0.685);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bolder;
+}
+
+/* -------------------------------------------------------- User Card --------------------------------------------------------------------- */
+
+/* .cardsContainer{
+ 
+} */
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li{
+  list-style: none;
+}
+
+.userCard{
+  border: 2px solid rgba(128, 128, 128, 0.164);
+  width: 270px;
+  padding: 8px;
+  margin: 5px 10px;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+hr{
+  margin: 2px 0px 8px 0px;
+  background-color: rgb(0, 0, 0);
+}
+
+.info{
+  color: rgb(182, 182, 182);
+}
+
+.cardsButtons{
+  margin-left: 185px;
+}
+
+.delete{
+  background-color: rgba(255, 0, 0, 0.508);
+  border: none;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.edit{
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+
+button{
+
+  cursor: pointer;
+}
