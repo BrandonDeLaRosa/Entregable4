@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import DeleteWindow from './DeleteWindow';
+
 
 const UsersList = ({users, selectUser,getUsers,deleted}) => {
 
@@ -21,9 +21,9 @@ const deleteUser = (id) => {
                     users.map(user => (
                         <li key={user.id}>
                             <div className="userCard">
-                                <h2>{user["first_name"]}{" "}
+                                <h2><i class="fa-solid fa-user"></i> {user["first_name"]}{" "}
                                     {user["last_name"]}</h2> <hr />
-                                <h4><b className='info'>CORREO </b><br />{user.email}</h4>
+                                <h4><b className='info'>CORREO </b><br/><i class="fa-regular fa-paper-plane"></i> {user.email}</h4>
                                 <h4><b className='info'>BIRTHDAY</b><br /> <i class="fa-regular fa-calendar"></i> {user.birthday}</h4>
                                 <div className='cardsButtons'>
                                 <button className='delete' onClick={() => deleteUser(user.id)}><i class="fa-solid fa-trash-can"></i></button>
