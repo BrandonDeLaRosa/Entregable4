@@ -63,7 +63,7 @@ const UsersApp = ({getUsers,selectedUser, deselectUser}) => {
          )
          .catch(error => console.log(error.response))
         }
-         clear()
+        clear()
     }
 
     return (
@@ -72,7 +72,7 @@ const UsersApp = ({getUsers,selectedUser, deselectUser}) => {
             {isUpdated? <UpdateWindow isUpdated={isUpdated} setIsUpdated={setIsUpdated}/> : null}
             {isCreated? <CreatedWindow isCreated={isCreated} setIsCreated={setIsCreated}/> : null}
             {isClear? <ClearWindow isClear={isClear} setIsClear={setIsClear}/> : null}
-            <button className='addUser' onClick={() => setNewElement(!newElement)} ><i class="fa-solid fa-user-plus"></i> New User</button>
+            <button type='button' className='addUser' onClick={() => setNewElement(!newElement)} ><i class="fa-solid fa-user-plus"></i> New User</button>
             <h1>Users App</h1>
             {newElement? (<>
                 <div className="inputContainer">
@@ -103,8 +103,41 @@ const UsersApp = ({getUsers,selectedUser, deselectUser}) => {
             <button className='clear' onClick={clear} type="button">Clear</button> 
             </>)
            : null}
+            
         </form>
     );
 };
 
 export default UsersApp;
+
+/*
+{newElement? (<>
+                <div className="inputContainer">
+                <label htmlFor="first_name"><i class="fa-solid fa-user"></i></label>
+                <input type="text" id='first_name' 
+                {...register("first_name")} placeholder="First Name" className='name'/>
+                 <label htmlFor="last_name"></label>
+
+                <input type="text" id='last_name'
+                {...register("last_name")} placeholder="Last Name" className='name'/>
+            </div>
+            <div className="inputContainer">
+                <label htmlFor="email"><i class="fa-solid fa-envelope"></i></label>
+                <input type="text" id='email' 
+                {...register("email")} placeholder="Email" className='email'/>
+            </div>
+            <div className="inputContainer">
+                <label htmlFor="password"><i class="fa-solid fa-lock"></i></label>
+                <input type="text" id='password' 
+                {...register("password")} placeholder="Password" className='password'/>
+            </div>
+            <div className="inputContainer">
+                <label htmlFor="birthday"><i class="fa-solid fa-calendar-days"></i></label>
+                <input type="date" id='birthday' 
+                {...register("birthday")} placeholder="Birthday" className='birthday'/>
+            </div><br />
+            <button className='create'>{selectedUser? "Update User" : "Create User"}</button>
+            <button className='clear' onClick={clear} type="button">Clear</button> 
+            </>)
+           : null}
+*/
